@@ -22,7 +22,7 @@
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
-    td1.id = `sum_day`;
+    td1.id = `sum1`;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);
@@ -84,7 +84,7 @@
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
-    td1.id = `sum_month`;
+    td1.id = `sum1`;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);

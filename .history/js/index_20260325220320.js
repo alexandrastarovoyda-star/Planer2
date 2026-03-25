@@ -22,7 +22,7 @@
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
-    td1.id = `sum_day`;
+    td1.id = `sum1`;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);
@@ -72,22 +72,22 @@
         const td2 = document.createElement('td');
         const input = document.createElement('input');
         input.type = 'number';
-        input.id = `input_${id}_month_spend_table`;
+        input.id = `input_${id}_day_spend_table`;
         input.addEventListener('input', SaveData);
         td2.textContent = value;
         td1.appendChild(input);
         tr.appendChild(td1);
         tr.appendChild(td2);
-        document.getElementById('month_spend_table').appendChild(tr);
+        document.getElementById('day_spend_table').appendChild(tr);
     };
 
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
-    td1.id = `sum_month`;
+    td1.id = `sum1`;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);
-    document.getElementById('month_spend_table').appendChild(tr);
+    document.getElementById('day_spend_table').appendChild(tr);
 }
 
