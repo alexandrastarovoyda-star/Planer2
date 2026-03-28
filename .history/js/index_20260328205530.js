@@ -1,6 +1,6 @@
-var categories = ['Продукти та домашні покупки', 'Одяг та взуття', 'Краса та медицина', 'Квартира та комунальні', 'Розваги та подарунки', 'Транспорт', 'Освіта'];
-
 {
+    var categories = ['Продукти та домашні покупки', 'Одяг та взуття', 'Краса та медицина', 'Квартира та комунальні', 'Розваги та подарунки', 'Транспорт', 'Освіта'];
+
     categories.forEach(Myfunction);
     LoadData();
 
@@ -91,7 +91,7 @@ var categories = ['Продукти та домашні покупки', 'Одя
 {
     const header = document.createElement('tr');
     let thCat = document.createElement('th');
-    thCat.textContent = 'Категорія';
+    th.textContent = 'Категорія';
     header.appendChild(thCat);
     for( let day = 1; day <= 31; day++){
         let th = document.createElement('th');
@@ -99,25 +99,24 @@ var categories = ['Продукти та домашні покупки', 'Одя
         header.appendChild(th);
     }
     let thSum = document.createElement('th');
-    thSum.textContent = 'Сума';
+    th.textContent = 'Сума';
     header.appendChild(thSum);
     document.getElementById('month_table').appendChild(header);
 }
-categories.forEach(function(cat, id){
-    const tr = document.createElement('tr');
+
+/*const tr = document.createElement('tr');
     const tdCat = document.createElement('td');
-    tdCat.textContent = cat;
+    tdCat.textContent = 
     tr.appendChild(tdCat);
     for( let day = 1; day <= 31; day++){
         const td = document.createElement('td');
         const input = document.createElement('input');
         input.type = 'number';
-        //input.addEventListener('input', CalculeteMonthSum);
+        input.addEventListener('input', CalculeteMonthSum);
         td.appendChild(input);
         tr.appendChild(td);
-        }
+    }
     const tdSum = document.createElement('td');
-    tdSum.id = `sum_cat_${id}`;
+    tdSum.textContent = 'Сума';
     tr.appendChild(tdSum);
-    document.getElementById('month_table').appendChild(tr);
-})
+    document.getElementById('month_table').appendChild(tr);*/

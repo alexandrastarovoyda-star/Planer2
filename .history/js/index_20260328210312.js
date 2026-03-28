@@ -1,6 +1,6 @@
-var categories = ['Продукти та домашні покупки', 'Одяг та взуття', 'Краса та медицина', 'Квартира та комунальні', 'Розваги та подарунки', 'Транспорт', 'Освіта'];
-
 {
+    var categories = ['Продукти та домашні покупки', 'Одяг та взуття', 'Краса та медицина', 'Квартира та комунальні', 'Розваги та подарунки', 'Транспорт', 'Освіта'];
+
     categories.forEach(Myfunction);
     LoadData();
 
@@ -112,7 +112,7 @@ categories.forEach(function(cat, id){
         const td = document.createElement('td');
         const input = document.createElement('input');
         input.type = 'number';
-        //input.addEventListener('input', CalculeteMonthSum);
+        input.addEventListener('input', CalculeteMonthSum);
         td.appendChild(input);
         tr.appendChild(td);
         }

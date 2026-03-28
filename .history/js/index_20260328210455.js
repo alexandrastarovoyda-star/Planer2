@@ -112,7 +112,7 @@ categories.forEach(function(cat, id){
         const td = document.createElement('td');
         const input = document.createElement('input');
         input.type = 'number';
-        //input.addEventListener('input', CalculeteMonthSum);
+        input.addEventListener('input', CalculeteMonthSum);
         td.appendChild(input);
         tr.appendChild(td);
         }
