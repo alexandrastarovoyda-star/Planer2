@@ -23,7 +23,6 @@ var categories = ['Продукти та домашні покупки', 'Одя
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     td1.id = `sum_day`;
-    td1.textContent = 0;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);
@@ -128,8 +127,6 @@ function ClearDayTable(){
     inputs.forEach(function(input){
         input.value = '';
     })
-    let sum_day = document.getElementById('sum_day');
-    sum_day.textContent = 0;
 }
 
 document.getElementById('Clear_day_table').onclick = ClearDayTable;

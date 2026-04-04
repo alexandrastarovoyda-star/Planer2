@@ -23,7 +23,6 @@ var categories = ['Продукти та домашні покупки', 'Одя
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     td1.id = `sum_day`;
-    td1.textContent = 0;
     td2.textContent = 'Сума';
     tr.appendChild(td1);
     tr.appendChild(td2);
