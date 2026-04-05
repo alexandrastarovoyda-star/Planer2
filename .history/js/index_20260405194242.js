@@ -2,6 +2,7 @@ var categories = ['Продукти та домашні покупки', 'Одя
 
 {
     categories.forEach(Myfunction);
+    LoadData();
 
     function Myfunction(value, id){
         const tr = document.createElement('tr');
@@ -27,9 +28,6 @@ var categories = ['Продукти та домашні покупки', 'Одя
     tr.appendChild(td1);
     tr.appendChild(td2);
     document.getElementById('day_spend_table').appendChild(tr);
-
-    
-    LoadData();
 
     function CalculeteSum(){
         let sum = 0;
@@ -58,9 +56,8 @@ var categories = ['Продукти та домашні покупки', 'Одя
         const inputs = document.querySelectorAll(' input');
         inputs.forEach(function(input){
             const saved = localStorage.getItem(input.id);
-            if(saved !== null){
+            if(saved !== null)
                 input.value = saved;
-            }
         });
         CalculeteSum();
     };

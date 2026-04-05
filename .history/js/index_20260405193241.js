@@ -2,6 +2,7 @@ var categories = ['Продукти та домашні покупки', 'Одя
 
 {
     categories.forEach(Myfunction);
+    LoadData();
 
     function Myfunction(value, id){
         const tr = document.createElement('tr');
@@ -28,9 +29,6 @@ var categories = ['Продукти та домашні покупки', 'Одя
     tr.appendChild(td2);
     document.getElementById('day_spend_table').appendChild(tr);
 
-    
-    LoadData();
-
     function CalculeteSum(){
         let sum = 0;
         const inputs = document.querySelectorAll('#day_spend_table input');
@@ -43,31 +41,34 @@ var categories = ['Продукти та домашні покупки', 'Одя
         });
         const sum_day =   document.getElementById('sum_day');
         sum_day.textContent = sum;
+        localStorage.setItem(sum_day.id, sum_day.textContent);
     };
 
     document.getElementById('Calculate_sum').onclick = CalculeteSum;
 
     function SaveData(){
-        const inputs = document.querySelectorAll('input');
+        const inputs = document.querySelectorAll('#day_spend_table input');
         inputs.forEach(function (input){
             localStorage.setItem(input.id, input.value);
         });
     };
 
     function LoadData (){
-        const inputs = document.querySelectorAll(' input');
+        const inputs = document.querySelectorAll('#day_spend_table input');
         inputs.forEach(function(input){
             const saved = localStorage.getItem(input.id);
-            if(saved !== null){
+            if(saved !== null)
                 input.value = saved;
-            }
         });
-        CalculeteSum();
+        const sum_day =  document.getElementById('sum_day');
+        const saved_sum = localStorage.getItem('sum_day');
+        sum_day.textContent = saved_sum;
     };
 }
 
 {
     categories.forEach(Myfunction);
+
     function Myfunction(value, id){
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
